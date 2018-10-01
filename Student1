@@ -1,0 +1,48 @@
+
+public class Student1 
+{
+	private String stName;
+	private int stId;
+	static String collegeName;
+	static int counter = 0;
+
+	//Constructor
+	public Student1(String stName) 
+	{
+		this.stName = stName;
+		this.stId = setStId();
+	}
+	
+	//Method
+	public static int setStId()
+	{
+		counter++;
+		return counter;
+	}
+	
+	//Static methods cannot have "this.cgeName"
+	public static void setCollegeName(String cgeName)
+	{
+		collegeName = cgeName;
+	}
+	
+	public void getStudentInfo()
+	{
+		System.out.println("Name: " + this.stName);
+		System.out.println("ID: " + this.stId);
+		System.out.println("College name: " +collegeName + "\n");
+		
+	}
+	
+	public static void main(String[] args) 
+	{
+		Student1.setCollegeName("Centennial College");
+		
+		Student1 st1 = new Student1("Carlos Dutra");
+		Student1 st2 = new Student1("Jose Arthur");
+		
+		st1.getStudentInfo();
+		st2.getStudentInfo();
+	}
+
+}
