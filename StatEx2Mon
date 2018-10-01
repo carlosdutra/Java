@@ -1,0 +1,21 @@
+
+public class StatEx1Mon {
+
+	static int age;
+	static String name;
+	public static void disp() 
+	{
+		age = 23;
+		System.out.println("\nAge is: " + age);
+		System.out.println("\nName is: " + name);
+	}
+	
+	public static void main(String[] args) {
+		disp();
+		name = "Carlos Dutra";
+		//disp();
+		System.out.println("\nAge is: " + age + "\nName is: " + name);
+		
+	}
+
+}
