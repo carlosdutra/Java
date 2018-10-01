@@ -1,0 +1,21 @@
+
+public class StatEx3Mon {
+
+	static int a = 10;
+	static int b;
+	static
+	{
+		System.out.println("\nStatic block is being initialized now...");
+		
+		b = a * 10;
+	
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("\nReporting from the main()");
+		System.out.println("\nThe value of a: " + a);
+		System.out.println("\nThe value of b: " + b);
+
+	}
+
+}
