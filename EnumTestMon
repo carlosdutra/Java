@@ -1,0 +1,42 @@
+
+public class EnumTestMon 
+{
+	Day day;
+	
+	public EnumTestMon(Day day)
+	{
+		this.day = day;
+	}
+	
+	public void howDoYouLikeTheDay()
+	{
+		switch(day)
+		{
+			case MONDAY:
+				System.out.println("\nHorrible, I have to work for 5 days in a row!");
+				break;
+			case FRIDAY:
+				System.out.println("\nNot bad at all! Weekend is coming soon!");
+				break;
+			case SATURDAY: case SUNDAY:
+				System.out.println("\nWonderful! Weekends are great!");
+				break;
+			default:
+				System.out.println("\nMid-week days are not that bad!");
+				break;
+		}
+	}
+	
+	public static void main(String[] args) 
+	{
+		EnumTestMon day1 = new EnumTestMon(Day.MONDAY);
+		EnumTestMon day2 = new EnumTestMon(Day.TUESDAY);
+		EnumTestMon day3 = new EnumTestMon(Day.SATURDAY);
+		
+		day1.howDoYouLikeTheDay();
+		day2.howDoYouLikeTheDay();
+		day3.howDoYouLikeTheDay();
+
+	}
+
+}
