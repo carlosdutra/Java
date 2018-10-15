@@ -1,0 +1,61 @@
+
+public class Employee 
+{
+	protected String name;
+	protected String empId;
+	public Employee(String name, String empId)
+	{
+		this.name = name;
+		this.empId = empId;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	public String getEmpId()
+	{
+		return empId;
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "\nName: " + name + "\nEmployee ID: " + empId;		
+	}
+}
+
+---------------------------------------
+
+public class Faculty extends Employee
+{
+	protected String title;	
+	public Faculty(String name, String empId, String title)
+	{
+		super(name, empId);
+		this.title = title;
+	}
+	
+	public String getTitle()
+	{
+		return title;
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "\nName: " + name + "\nEmployee Id: " + empId + "\nTitle: " + title;
+	}
+	
+	public static void main(String[] args) 
+	{
+		Employee e1 = new Employee("Carlos Dutra", "001");
+		System.out.println(e1.getEmpId());
+		System.out.println(e1.getName());
+		System.out.println(e1);
+		
+		Faculty f1 = new Faculty("Henrique Dutra", "002", "Software Enginner");
+		System.out.println(f1);	
+
+	}
+}
