@@ -1,0 +1,40 @@
+
+public class BaseClass {
+	protected int result;
+	public void addition(int a, int b)
+	{
+		result = (a + b);
+		System.out.println("\nThe result of the addition is: " + result);
+	}
+	public void subtraction(int a, int b)
+	{
+		result = (a - b);
+		System.out.println("\nThe result of the subtraction is: " + result);
+	}
+}
+
+--------------------------
+
+
+public class MyChild extends BaseClass 
+{
+	public void multiplication(int a, int b)
+	{
+		result = (a * b);
+		System.out.println("\nThe result of this multiplication is: " + result);
+	}
+	
+	
+	public static void main(String[] args) 
+	{
+		BaseClass demo = new MyChild();
+		MyChild test = new MyChild();		
+		
+		demo.addition(5, 5);
+		demo.subtraction(10, 5);
+		
+		test.multiplication(5, 5);
+
+	}
+
+}
