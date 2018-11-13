@@ -1,0 +1,12 @@
+import javax.swing.JFrame;
+public class MyFrame {
+
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("Carlos Dutra");
+		frame.setSize(300, 400);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+
+	}
+}
