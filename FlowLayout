@@ -1,0 +1,30 @@
+import javax.swing.*;
+import java.awt.FlowLayout;
+
+public class ShowFlowLayout extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public ShowFlowLayout() {
+		setLayout(new FlowLayout(FlowLayout.LEFT));
+		add(new JLabel("First Name: "));
+		add(new JTextField(8));
+		add(new JLabel("MI: "));
+		add(new JTextField(1));
+		add(new JLabel("Last Name: "));
+		add(new JTextField(8));
+	}
+	
+	public static void main(String[] args) {
+		
+		ShowFlowLayout frame = new ShowFlowLayout();
+		frame.setTitle("Flow Layout");
+		frame.setSize(300, 300);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
+}
